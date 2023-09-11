@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>add category</title>
+</head>
+
+<body>
+<div class="container">
+  <h1>Management</h1>
+  <hr>
+  <h2>Save Category</h2>
+
+  <form action="#" th:action="@{/categorys/save}" th:object="${category}"
+        method="POST">
+    <input type="text" th:field="*{name}" placeholder="Category name"
+           class="form-control mb-4 col-4">
+
+
+
+    <button type="submit" class="btn btn-info col-2">Save
+      Category</button>
+  </form>
+
+  <hr>
+
+  <a th:href="@{/categorys}"> Back to Category List</a>
+</div>
+
+</body>
+</html>
